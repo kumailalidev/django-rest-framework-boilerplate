@@ -38,7 +38,8 @@ urlpatterns = [
         name="redoc",
     ),
     # Project
-    # Your Project URLS...
+    # core
+    path("ping/", include("project.core.urls", namespace="core")),
 ]
 
 # for development environment only

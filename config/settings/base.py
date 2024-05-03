@@ -296,6 +296,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ------------------------------------------------------------------------------
 # https://www.django-rest-framework.org/api-guide/settings/#settings
 REST_FRAMEWORK = {
+    "DEFAULT_RENDERER_CLASSES": [
+        # Default
+        "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
+    ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
         # Default
         "rest_framework.authentication.SessionAuthentication",
