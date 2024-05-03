@@ -14,6 +14,11 @@ PUBLIC_DIR = BASE_DIR / "public"
 
 env = environ.Env()
 
+ENV_FILE = BASE_DIR / ".env"
+if Path(ENV_FILE).exists():
+    # Take environment variables form .env file
+    env.read_env(str(ENV_FILE))
+
 # GENERAL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
@@ -72,7 +77,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
 ]
 LOCAL_APPS = [
-    # ...
+    "project.core.apps.CoreConfig",
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
