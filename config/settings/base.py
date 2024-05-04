@@ -136,8 +136,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-# STORAGE
+# STORAGES
 # ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#storages
 STORAGES = {
     "default": {
         # Default

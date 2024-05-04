@@ -73,14 +73,16 @@ EMAIL_SUBJECT_PREFIX = env("DJANGO_EMAIL_SUBJECT_PREFIX")
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
 EMAIL_TIMEOUT = env.int("DJANGO_EMAIL_TIMEOUT", default=None)
 
-# STORAGE
+# STORAGES
 # ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#storages
 STORAGES = {
     "default": {
         # Default
         "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
     "staticfiles": {
+        # https://whitenoise.readthedocs.io/en/latest/django.html#add-compression-and-caching-support
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
