@@ -141,6 +141,16 @@ LOGGING = {
     },
 }
 
+# Django REST Framework
+# ------------------------------------------------------------------------------
+# https://www.django-rest-framework.org/api-guide/settings/#settings
+
+# disable browsable API renderer
+# https://www.django-rest-framework.org/api-guide/settings/#default_renderer_classes
+REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
+    "rest_framework.renderers.JSONRenderer",
+]
+
 # django-cors-headers
 # ------------------------------------------------------------------------------
 # https://github.com/adamchainz/django-cors-headers
