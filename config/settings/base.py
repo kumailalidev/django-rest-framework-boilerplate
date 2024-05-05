@@ -333,8 +333,11 @@ SPECTACULAR_SETTINGS = {
 # django-cors-headers
 # ------------------------------------------------------------------------------
 # https://github.com/adamchainz/django-cors-headers
+
+# https://github.com/adamchainz/django-cors-headers?tab=readme-ov-file#cors_urls_regex-str--patternstr
 CORS_URLS_REGEX = r"^/api/.*$"
 
+# https://github.com/adamchainz/django-cors-headers?tab=readme-ov-file#cors_allow_methods-sequencestr
 CORS_ALLOW_METHODS = (
     "DELETE",
     "GET",
@@ -343,3 +346,16 @@ CORS_ALLOW_METHODS = (
     "POST",
     "PUT",
 )
+
+# https://github.com/adamchainz/django-cors-headers?tab=readme-ov-file#cors_allow_headers-sequencestr
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+)
+
+# https://github.com/adamchainz/django-cors-headers?tab=readme-ov-file#cors_allow_all_origins-bool
+CORS_ALLOW_ALL_ORIGINS = False  # Default
