@@ -152,6 +152,17 @@ STORAGES = {
     },
 }
 
+# CACHES
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#caches
+CACHES = {
+    # Default
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "",
+    }
+}
+
 # STATIC
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-root
@@ -217,7 +228,6 @@ CSRF_TRUSTED_ORIGINS = []  # Default
 # https://docs.djangoproject.com/en/dev/ref/settings/#x-frame-options
 X_FRAME_OPTIONS = "DENY"
 
-
 # HTTP
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-x-forwarded-host
@@ -263,7 +273,6 @@ ADMIN_URL = "admin/"
 ADMINS = []  # Default
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = []  # Default
-
 
 # LOGGING
 # ------------------------------------------------------------------------------
